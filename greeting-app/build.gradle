@@ -1,0 +1,56 @@
+buildscript {
+  ext {
+    springBootVersion = '1.5.6.RELEASE'
+  }
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+ext {
+  springCloudServicesVersion = '1.5.0.RELEASE'
+  springCloudVersion = 'Dalston.SR3'
+}
+
+dependencies {
+  compile 'org.springframework.boot:spring-boot-starter-web'
+  compile 'org.springframework.boot:spring-boot-starter-actuator'
+  compile 'org.springframework.boot:spring-boot-starter-freemarker'
+
+  compile 'org.springframework.cloud:spring-cloud-starter-feign'
+
+  compile 'io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry'
+  compile 'io.pivotal.spring.cloud:spring-cloud-services-starter-config-client'
+  compile 'io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker'
+
+  compile 'org.springframework.cloud:spring-cloud-starter-bus-amqp'
+
+  runtime 'org.springframework.boot:spring-boot-devtools'
+
+  compileOnly 'org.projectlombok:lombok'
+
+  testCompile 'org.springframework.boot:spring-boot-starter-test'
+  testCompile 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
+}
+
+dependencyManagement {
+  imports {
+    mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:${springCloudServicesVersion}"
+    mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+  }
+}
+

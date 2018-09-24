@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="io.pivotal.training.fortune.FortuneServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-01-12T19:42:57" hostname="NamNgoPC" time="0.048">
+  <properties/>
+  <testcase name="shouldReturnANonBlankFortune" classname="io.pivotal.training.fortune.FortuneServiceTests" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

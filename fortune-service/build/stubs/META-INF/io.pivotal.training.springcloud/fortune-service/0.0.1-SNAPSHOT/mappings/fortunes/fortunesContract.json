@@ -1,0 +1,16 @@
+{
+  "id" : "2b59ad70-ba56-4b73-83f4-54ebe32971f5",
+  "request" : {
+    "url" : "/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "{\"fortune\":\"a random fortune\"}",
+    "headers" : {
+      "Content-Type" : "application/json"
+    },
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "2b59ad70-ba56-4b73-83f4-54ebe32971f5"
+}

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: greeting
+
+management:
+  security:
+    enabled: false
+
+greeting:
+  displayFortune: true
+
+fortune:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
